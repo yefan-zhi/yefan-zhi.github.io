@@ -269,58 +269,54 @@
        
        
             <div class="post-md">
-                <div class=".article-gallery"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-<style>
+                <div class=".article-gallery"><style>
     .image-text-container {
         display: grid;
         grid-template-columns: 16% 84%;
         gap: 20px;
-        align-items: start;
+        align-items: center;
         margin-bottom: 10px;
     }
 
-<pre><code>.image-text-container img &#123;
-    width: 100%;
-&#125;
+    .image-text-container img {
+        width: 100%;
+    }
 
-.image-text-container p &#123;
-    margin-top: 0;
-&#125;
+    .image-text-container p {
+        margin-top: 0;
+    }
 
-/* Media query for narrow screens */
-@media (max-width: 768px) &#123;
-    .image-text-container &#123;
-        grid-template-columns: 100%; /* Stack the image and text */
-&#125;
+    /* Media query for narrow screens */
+    @media (max-width: 768px) {
+        .image-text-container {
+            grid-template-columns: 100%; /* Stack the image and text */
+    }
+    
+    .image-text-container img {
+        width: 100%; /* Image takes full width */
+    }
 
-.image-text-container img &#123;
-    width: 100%; /* Image takes full width */
-&#125;
+    }
+    .c1 {
+      /* color: #D0121B !important; */
+      /* color:rgb(119, 130, 154) !important; */
+      font-family: Roboto;
+      /* color: rgba(100, 100, 100, 1); */
+    }
+    
+    .hl {
+      color: #D0121B !important;
+      font-weight: bold !important;
+      font-style: italic !important;
+    }
 
-&#125;
-.c1 &#123;
-  /* color: #D0121B !important; */
-  /* color:rgb(119, 130, 154) !important; */
-  font-family: Roboto;
-  /* color: rgba(100, 100, 100, 1); */
-&#125;
-
-.hl &#123;
-  color: #D0121B !important;
-  font-weight: bold !important;
-  font-style: italic !important;
-&#125;
-
-a:has(img) &#123;
-  pointer-events: none;
-  cursor: default;
-&#125;
-</code></pre>
-<p></style></p>
+    a:has(img) {
+      pointer-events: none;
+      cursor: default;
+    }
+</style>
 <script src="https://kit.fontawesome.com/6c66cf7fa2.js" crossorigin="anonymous"></script>
-<div class="image-text-container" style="align-items: end; margin-bottom: 20px;">
+<div class="image-text-container" style="margin-bottom: 20px;">
   <div>
     <a href="/index/Yefan Zhi.jpg" title="Automated Toolpath Design of 3D Concrete Printing Structural Components" class="gallery-item" style="box-shadow: none;"> <img src="/index/Yefan Zhi.jpg" alt="Automated Toolpath Design of 3D Concrete Printing Structural Components"/></a>
   </div>
