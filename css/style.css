@@ -57,7 +57,8 @@ a
 {
     width: 100%;
     max-width: 580px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 0;
     padding: 36px 4.5vw 0px;
     border-radius: 0px;
     background: #ffffff;
