@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     
+    <script src="https://kit.fontawesome.com/6c66cf7fa2.js" crossorigin="anonymous"></script>
     <link rel="alternate icon" type="image/webp" href="/img/1800.png">
     <title>Yefan Zhi</title>
 
@@ -337,7 +338,7 @@
     .c1 {
       /* color: #D0121B !important; */
       /* color:rgb(119, 130, 154) !important; */
-      font-family: Roboto;
+      font-family: Roboto !important;
       /* color: rgba(100, 100, 100, 1); */
     }
     
@@ -351,8 +352,20 @@
       pointer-events: none;
       cursor: default;
     }
+        .tab {
+            color: #4f7dde;
+            cursor: pointer;
+        }
+        .tab.active {
+            color: #000000;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
 </style>
-<script src="https://kit.fontawesome.com/6c66cf7fa2.js" crossorigin="anonymous"></script>
 <div class="image-text-container" style="margin-bottom: 20px;">
   <div>
     <a href="/index/Yefan Zhi.jpg" title="Automated Toolpath Design of 3D Concrete Printing Structural Components" class="gallery-item" style="box-shadow: none;"> <img src="/index/Yefan Zhi.jpg" alt="Automated Toolpath Design of 3D Concrete Printing Structural Components"/></a>
@@ -366,7 +379,29 @@ University of Pennsylvania
 
 <p><em>I am a second-year Ph.D. student in <a target="_blank" rel="noopener" href="https://www.design.upenn.edu/architecture/phd/about2">Architecture</a> at the <a target="_blank" rel="noopener" href="https://www.upenn.edu/">University of Pennsylvania</a> where I am part of the <a target="_blank" rel="noopener" href="https://psl.design.upenn.edu/">Polyhedral Structures Laboratory (PSL)</a> concentrating on advancing structural&#x2F;architectural geometry and construction technologies. My research interest is in <strong>3D concrete printing</strong>, its application in <strong>structural systems</strong>, and methods of <strong>multi-material extrusion</strong>. I am especially excited in exploiting computational geometry and graph algorithms to optimize the energy and material efficiency of these additive manufacturing processes across the architecture, engineering, and construction industry.</em></p>
 <p><em>I write <a href="https://yefan-zhi.github.io/blog/">blog posts</a>, <a target="_blank" rel="noopener" href="https://ebird.org/profile/ODA3MTI4/world">bird watch</a>, and run <a href="https://yefan-zhi.github.io/storage/Yefan_Zhi_Runner_Profile.pdf">marathons</a>. My full CV is available <a href="https://yefan-zhi.github.io/storage/Yefan_Zhi_CV.pdf">here</a>.</em></p>
-<h1 id="Selected-Publications"><a href="#Selected-Publications" class="headerlink" title="Selected Publications"></a>Selected Publications</h1><h2 id="3D-Concrete-Printing-3DCP"><a href="#3D-Concrete-Printing-3DCP" class="headerlink" title="3D Concrete Printing (3DCP)"></a>3D Concrete Printing (3DCP)</h2><!-- J4 -->
+<script>
+    function showTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.getElementById(tabId).classList.add('active');
+
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
+</script>
+
+
+<h1>Selected Publications <span class="c1" style="font-size: 1rem;line-height: 1;font-weight: 400;"><span class="tab active" onclick="showTab('content-by-topic')">[By Topic]</span> <span class="tab" onclick="showTab('content-by-year')">[By Year]</span> <span class="tab" onclick="showTab('content-by-type')">[By Type]</span></span></h1>
+
+<div id="content-by-topic" class="tab-content active"></div>
+<div id="content-by-year" class="tab-content"></div>
+<div id="content-by-type" class="tab-content"></div>
+
+<script>
+const J4 = `<!-- J4 -->
 <div class="image-text-container">
   <div>
     <a href="/index/Automated Toolpath Design of.jpg" title="Automated Toolpath Design of 3D Concrete Printing Structural Components" class="gallery-item" style="box-shadow: none;"> <img src="/index/Automated Toolpath Design of.jpg" alt="Automated Toolpath Design of 3D Concrete Printing Structural Components"/></a>
@@ -375,9 +410,20 @@ University of Pennsylvania
 <i>Yefan Zhi</i>, Hua Chai, Teng Teng, Masoud Akbarzadeh
 <span class="c1">Additive Manufacturing 2025 <span class="hl">IF=10.3</span> <a target="_blank" rel="noopener" href="https://psl.design.upenn.edu/project/automated-toolpath-design-of-3d-concrete-printing-structural-components/">[Project Page]</a> <a target="_blank" rel="noopener" href="https://www.food4rhino.com/en/app/ovenbird?lang=en">[Code]</a> <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2214860425000260">[Paper]</a></span></p> 
   </div>
-</div>
+</div>`;
 
-<!-- J2 -->
+const J3 = `<!-- J3 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/Prototyping High-Fidelity Multifunctional Objects.jpg" title="Prototyping High-Fidelity Multifunctional Objects Using Single-Nozzle Multi-Filament Additive Manufacturing System with Active Mixing" class="gallery-item" style="box-shadow: none;"> <img src="/index/Prototyping High-Fidelity Multifunctional Objects.jpg" alt="Prototyping High-Fidelity Multifunctional Objects Using Single-Nozzle Multi-Filament Additive Manufacturing System with Active Mixing"/></a>
+  </div>
+  <div><p><strong>Prototyping High-Fidelity Multifunctional Objects Using Single-Nozzle Multi-Filament Additive Manufacturing System with Active Mixing</strong>
+Teng Teng, <i>Yefan Zhi</i>, Masoud Akbarzadeh
+<span class="c1">Materials & Design 2025 <span class="hl">IF=8.4</span> <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0264127524008542">[Paper]</a></span></p>
+  </div>
+</div>`;
+
+const J2 = `<!-- J2 -->
 <!-- IF=1.5 -->
 <div class="image-text-container">
   <div>
@@ -387,98 +433,9 @@ University of Pennsylvania
 <i>Yefan Zhi</i>, Teng Teng, Masoud Akbarzadeh
 <span class="c1">Architectural Intelligence 2024 <a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s44223-024-00070-3">[Paper]</a></span></p>
   </div>
-</div>
+</div>`;
 
-<!-- C2 -->
-<div class="image-text-container">
-  <div>
-    <a href="/index/Local Optimization of Self-Supporting.jpg" title="Local Optimization of Self-Supporting Shell Structures in 3D Printing: a Skeleton Method" class="gallery-item" style="box-shadow: none;"> <img src="/index/Local Optimization of Self-Supporting.jpg" alt="Local Optimization of Self-Supporting Shell Structures in 3D Printing: a Skeleton Method"/></a>
-  </div>
-  <div><p><strong>Local Optimization of Self-Supporting Shell Structures in 3D Printing: a Skeleton Method</strong>
-<i>Yefan Zhi</i>, Hua Chai, Teng Teng, Masoud Akbarzadeh
-<span class="c1">IASS 2023 <i>Melbourne, Australia</i> <a target="_blank" rel="noopener" href="https://www.ingentaconnect.com/contentone/iass/piass/2023/00002023/00000025/art00005">[Paper]</a></span></p>
-  </div>
-</div>
-
-<h2 id="3DCP-Structural-Systems"><a href="#3DCP-Structural-Systems" class="headerlink" title="3DCP Structural Systems"></a>3DCP Structural Systems</h2><!-- C6 -->
-<div class="image-text-container">
-  <div>
-    <a href="/index/The Effect of Post-Tensioning.jpg" title="The Effect of Post-Tensioning on the Behavior of Small-Scale 3D-Printed Concrete Beams" class="gallery-item" style="box-shadow: none;"> <img src="/index/The Effect of Post-Tensioning.jpg" alt="The Effect of Post-Tensioning on the Behavior of Small-Scale 3D-Printed Concrete Beams"/></a>
-  </div>
-  <div><p><strong>The Effect of Post-Tensioning on the Behavior of Small-Scale 3D-Printed Concrete Beams</strong>
-Damon Bolhassani, Fahimeh Yavartanoo, Javier Tapia, Masoud Akbarzadeh, Maximilian E. Ororbia, Hua Chai, <i>Yefan Zhi</i>, Mylene Bernard, Leon Trousset, Karolina Pajak, Blaise Waligun, Paul Kassabian
-<span class="c1">IASS 2024 <i>Zurich, Switzerland</i> <a target="_blank" rel="noopener" href="https://www.semanticscholar.org/paper/The-effect-of-post-tensioning-on-the-behavior-of-Block-Boller/2b4e0cd88479bcde86863ff953f09b5b2f5b261c">[Paper]</a></span></p>
-  </div>
-</div>
-
-<!-- C5 -->
-<div class="image-text-container">
-  <div>
-    <a href="/index/Experimental Study of a Funicular.jpg" title="Experimental Study of a Funicular Concrete Beam Prototype" class="gallery-item" style="box-shadow: none;"> <img src="/index/Experimental Study of a Funicular.jpg" alt="Experimental Study of a Funicular Concrete Beam Prototype"/></a>
-  </div>
-  <div><p><strong>Experimental Study of a Funicular Concrete Beam Prototype</strong>
-Maximilian Ororbia, Hua Chai, <i>Yefan Zhi</i>, Pouria Vakhshouri, Jorge Huisa Chacon, Joseph R. Yost, Mathias Bernhard, Fahimeh Yavartanoo, Javier Tapia, Damon Bolhassani, Mylene Bernard, Leon Trousset, Karolina Pajak, Blaise Waligun, Paul Kassabian, Masoud Akbarzadeh
-<span class="c1">IASS 2024 <i>Zurich, Switzerland</i> <a target="_blank" rel="noopener" href="https://www.research-collection.ethz.ch/handle/20.500.11850/717318">[Paper]</a></span></p>
-  </div>
-</div>
-
-<!-- C4 -->
-<div class="image-text-container">
-  <div>
-    <a href="/index/Design Approach for a Post.jpg" title="Design Approach for a Post-tensioned Funicular Concrete Beam" class="gallery-item" style="box-shadow: none;"> <img src="/index/Design Approach for a Post.jpg" alt="Design Approach for a Post-tensioned Funicular Concrete Beam"/></a>
-  </div>
-  <div><p><strong>Design Approach for a Post-tensioned Funicular Concrete Beam</strong>
-Hua Chai, Maximilian Ororbia,<i>Yefan Zhi</i>, Ryan Welch, Billie Faircloth, Fahimeh Yavartanoo, Damon Bolhassani, Masoud Akbarzadeh
-<span class="c1">IASS 2024 <i>Zurich, Switzerland</i> <a target="_blank" rel="noopener" href="https://app.iass2024.org/files/IASS_2024_Paper_470.pdf">[Paper]</a></span></p>
-  </div>
-</div>
-
-<!-- C3 -->
-<div class="image-text-container">
-  <div>
-    <a href="/index/Diamanti 3D-Printed, Post-tensioned.jpg" title="Diamanti: 3D-Printed, Post-tensioned Concrete Canopy" class="gallery-item" style="box-shadow: none;"> <img src="/index/Diamanti 3D-Printed, Post-tensioned.jpg" alt="Diamanti: 3D-Printed, Post-tensioned Concrete Canopy"/></a>
-  </div>
-  <div><p><strong>Diamanti: 3D-Printed, Post-Tensioned Concrete Canopy</strong>
-Masoud Akbarzadeh, Hua Chai, <i>Yefan Zhi</i>, Maximilian E. Ororbia, Teng Teng, Mathias Bernhard, Damon Bolhassani, Fahimeh Yavartanoo, Javier Tapia, Karolina Pajak, Mylene Bernard, Leon Trousset, Paul Kassabian, Blaise Waligun
-<span class="c1">FABRICATE 2024 <i>Copenhagen, Denmark</i> <a target="_blank" rel="noopener" href="https://psl.design.upenn.edu/project/diamanti-3d-printed-post-tensioned-concrete-canopy/">[Project Page]</a> <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/jj.11374766.40">[Paper]</a></span></p>
-  </div>
-</div>
-
-
-<h2 id="Multi-Material-Extrusion"><a href="#Multi-Material-Extrusion" class="headerlink" title="Multi-Material Extrusion"></a>Multi-Material Extrusion</h2><!-- J3 -->
-<div class="image-text-container">
-  <div>
-    <a href="/index/Prototyping High-Fidelity Multifunctional Objects.jpg" title="Prototyping High-Fidelity Multifunctional Objects Using Single-Nozzle Multi-Filament Additive Manufacturing System with Active Mixing" class="gallery-item" style="box-shadow: none;"> <img src="/index/Prototyping High-Fidelity Multifunctional Objects.jpg" alt="Prototyping High-Fidelity Multifunctional Objects Using Single-Nozzle Multi-Filament Additive Manufacturing System with Active Mixing"/></a>
-  </div>
-  <div><p><strong>Prototyping High-Fidelity Multifunctional Objects Using Single-Nozzle Multi-Filament Additive Manufacturing System with Active Mixing</strong>
-Teng Teng, <i>Yefan Zhi</i>, Masoud Akbarzadeh
-<span class="c1">Materials & Design 2025 <span class="hl">IF=8.4</span> <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0264127524008542">[Paper]</a></span></p>
-  </div>
-</div>
-
-<!-- C7 -->
-<div class="image-text-container">
-  <div>
-    <a href="/index/Functionally Graded Architectural Materials Integrated.jpg" title="Functionally Graded Architectural Materials: Integrated and Tailored Thermal Insulation through Gradient Multimaterial Additive Manufacturing for Masonry Architectural Components" class="gallery-item" style="box-shadow: none;"> <img src="/index/Functionally Graded Architectural Materials Integrated.jpg" alt="Functionally Graded Architectural Materials: Integrated and Tailored Thermal Insulation through Gradient Multimaterial Additive Manufacturing for Masonry Architectural Components"/></a>
-  </div>
-  <div><p><strong>Functionally Graded Architectural Materials: Integrated and Tailored Thermal Insulation through Gradient Multimaterial Additive Manufacturing for Masonry Architectural Components</strong>
-Teng Teng, <i>Yefan Zhi</i>, Masoud Akbarzadeh
-<span class="c1">ACADIA 2024 <i>Banff, Canada,</i> <span class="hl">Best Paper Award (Runner-Up)</span> <a target="_blank" rel="noopener" href="https://psl.design.upenn.edu/project/integrated-and-tailored-thermal-insulation-through-gradient-multimaterial-additive-manufacturing-for-masonry-architectural-components/">[Project Page]</a> <a target="_blank" rel="noopener" href="https://psl.design.upenn.edu/Publications/\#functionally-graded-architectural-materials">[Paper]</a></span></p>
-  </div>
-</div>
-
-<!-- C1 -->
-<div class="image-text-container">
-  <div>
-    <a href="/index/Continuous Multi-Filament 3D Printing.jpg" title="Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components" class="gallery-item" style="box-shadow: none;"> <img src="/index/Continuous Multi-Filament 3D Printing.jpg" alt="Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components"/></a>
-  </div>
-  <div><p><strong>Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components</strong>
-<i>Yefan Zhi</i>, Hua Chai, Teng Teng, Masoud Akbarzadeh
-<span class="c1">IASS 2023 <i>Melbourne, Australia</i> <a target="_blank" rel="noopener" href="https://www.ingentaconnect.com/contentone/iass/piass/2023/00002023/00000025/art00012">[Paper]</a></span></p>
-  </div>
-</div>
-
-<h2 id="Data-Driven-Design"><a href="#Data-Driven-Design" class="headerlink" title="Data-Driven Design"></a>Data-Driven Design</h2><!-- J1 -->
+const J1 = `<!-- J1 -->
 <!-- IF=0.04 -->
 <div class="image-text-container">
   <div>
@@ -488,7 +445,105 @@ Teng Teng, <i>Yefan Zhi</i>, Masoud Akbarzadeh
 <i>Yefan Zhi</i>, Ziyu Huang, Weixin Huang
 <span class="c1">Urban, Environment, Design (UED) 2023 <i>in Chinese,</i> <span class="hl">on Cover</span> <a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/376855865_Research_on_the_Villagers'_Behavior_Characteristics_in_Rural_Area--Analysis_Using_Spatio-Temporal_Data_from_Wi-Fi_and_Surveillance_Video">[Paper]</a></span></p>
   </div>
-</div>
+</div>`;
+
+const C7 = `<!-- C7 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/Functionally Graded Architectural Materials Integrated.jpg" title="Functionally Graded Architectural Materials: Integrated and Tailored Thermal Insulation through Gradient Multimaterial Additive Manufacturing for Masonry Architectural Components" class="gallery-item" style="box-shadow: none;"> <img src="/index/Functionally Graded Architectural Materials Integrated.jpg" alt="Functionally Graded Architectural Materials: Integrated and Tailored Thermal Insulation through Gradient Multimaterial Additive Manufacturing for Masonry Architectural Components"/></a>
+  </div>
+  <div><p><strong>Functionally Graded Architectural Materials: Integrated and Tailored Thermal Insulation through Gradient Multimaterial Additive Manufacturing for Masonry Architectural Components</strong>
+Teng Teng, <i>Yefan Zhi</i>, Masoud Akbarzadeh
+<span class="c1">ACADIA 2024 <i>Banff, Canada,</i> <span class="hl">Best Paper Award (Runner-Up)</span> <a target="_blank" rel="noopener" href="https://psl.design.upenn.edu/project/integrated-and-tailored-thermal-insulation-through-gradient-multimaterial-additive-manufacturing-for-masonry-architectural-components/">[Project Page]</a> <a target="_blank" rel="noopener" href="https://psl.design.upenn.edu/Publications/\#functionally-graded-architectural-materials">[Paper]</a></span></p>
+  </div>
+</div>`;
+
+const C6 = `<!-- C6 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/The Effect of Post-Tensioning.jpg" title="The Effect of Post-Tensioning on the Behavior of Small-Scale 3D-Printed Concrete Beams" class="gallery-item" style="box-shadow: none;"> <img src="/index/The Effect of Post-Tensioning.jpg" alt="The Effect of Post-Tensioning on the Behavior of Small-Scale 3D-Printed Concrete Beams"/></a>
+  </div>
+  <div><p><strong>The Effect of Post-Tensioning on the Behavior of Small-Scale 3D-Printed Concrete Beams</strong>
+Damon Bolhassani, Fahimeh Yavartanoo, Javier Tapia, Masoud Akbarzadeh, Maximilian E. Ororbia, Hua Chai, <i>Yefan Zhi</i>, Mylene Bernard, Leon Trousset, Karolina Pajak, Blaise Waligun, Paul Kassabian
+<span class="c1">IASS 2024 <i>Zurich, Switzerland</i> <a target="_blank" rel="noopener" href="https://www.semanticscholar.org/paper/The-effect-of-post-tensioning-on-the-behavior-of-Block-Boller/2b4e0cd88479bcde86863ff953f09b5b2f5b261c">[Paper]</a></span></p>
+  </div>
+</div>`;
+
+const C5 = `<!-- C5 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/Experimental Study of a Funicular.jpg" title="Experimental Study of a Funicular Concrete Beam Prototype" class="gallery-item" style="box-shadow: none;"> <img src="/index/Experimental Study of a Funicular.jpg" alt="Experimental Study of a Funicular Concrete Beam Prototype"/></a>
+  </div>
+  <div><p><strong>Experimental Study of a Funicular Concrete Beam Prototype</strong>
+Maximilian Ororbia, Hua Chai, <i>Yefan Zhi</i>, Pouria Vakhshouri, Jorge Huisa Chacon, Joseph R. Yost, Mathias Bernhard, Fahimeh Yavartanoo, Javier Tapia, Damon Bolhassani, Mylene Bernard, Leon Trousset, Karolina Pajak, Blaise Waligun, Paul Kassabian, Masoud Akbarzadeh
+<span class="c1">IASS 2024 <i>Zurich, Switzerland</i> <a target="_blank" rel="noopener" href="https://www.research-collection.ethz.ch/handle/20.500.11850/717318">[Paper]</a></span></p>
+  </div>
+</div>`;
+
+const C4 = `<!-- C4 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/Design Approach for a Post.jpg" title="Design Approach for a Post-tensioned Funicular Concrete Beam" class="gallery-item" style="box-shadow: none;"> <img src="/index/Design Approach for a Post.jpg" alt="Design Approach for a Post-tensioned Funicular Concrete Beam"/></a>
+  </div>
+  <div><p><strong>Design Approach for a Post-tensioned Funicular Concrete Beam</strong>
+Hua Chai, Maximilian Ororbia,<i>Yefan Zhi</i>, Ryan Welch, Billie Faircloth, Fahimeh Yavartanoo, Damon Bolhassani, Masoud Akbarzadeh
+<span class="c1">IASS 2024 <i>Zurich, Switzerland</i> <a target="_blank" rel="noopener" href="https://app.iass2024.org/files/IASS_2024_Paper_470.pdf">[Paper]</a></span></p>
+  </div>
+</div>`;
+
+const C3 = `<!-- C3 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/Diamanti 3D-Printed, Post-tensioned.jpg" title="Diamanti: 3D-Printed, Post-tensioned Concrete Canopy" class="gallery-item" style="box-shadow: none;"> <img src="/index/Diamanti 3D-Printed, Post-tensioned.jpg" alt="Diamanti: 3D-Printed, Post-tensioned Concrete Canopy"/></a>
+  </div>
+  <div><p><strong>Diamanti: 3D-Printed, Post-Tensioned Concrete Canopy</strong>
+Masoud Akbarzadeh, Hua Chai, <i>Yefan Zhi</i>, Maximilian E. Ororbia, Teng Teng, Mathias Bernhard, Damon Bolhassani, Fahimeh Yavartanoo, Javier Tapia, Karolina Pajak, Mylene Bernard, Leon Trousset, Paul Kassabian, Blaise Waligun
+<span class="c1">FABRICATE 2024 <i>Copenhagen, Denmark</i> <a target="_blank" rel="noopener" href="https://psl.design.upenn.edu/project/diamanti-3d-printed-post-tensioned-concrete-canopy/">[Project Page]</a> <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/jj.11374766.40">[Paper]</a></span></p>
+  </div>
+</div>`;
+
+const C2 = `<!-- C2 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/Local Optimization of Self-Supporting.jpg" title="Local Optimization of Self-Supporting Shell Structures in 3D Printing: a Skeleton Method" class="gallery-item" style="box-shadow: none;"> <img src="/index/Local Optimization of Self-Supporting.jpg" alt="Local Optimization of Self-Supporting Shell Structures in 3D Printing: a Skeleton Method"/></a>
+  </div>
+  <div><p><strong>Local Optimization of Self-Supporting Shell Structures in 3D Printing: a Skeleton Method</strong>
+<i>Yefan Zhi</i>, Hua Chai, Teng Teng, Masoud Akbarzadeh
+<span class="c1">IASS 2023 <i>Melbourne, Australia</i> <a target="_blank" rel="noopener" href="https://www.ingentaconnect.com/contentone/iass/piass/2023/00002023/00000025/art00005">[Paper]</a></span></p>
+  </div>
+</div>`;
+
+const C1 = `<!-- C1 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/Continuous Multi-Filament 3D Printing.jpg" title="Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components" class="gallery-item" style="box-shadow: none;"> <img src="/index/Continuous Multi-Filament 3D Printing.jpg" alt="Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components"/></a>
+  </div>
+  <div><p><strong>Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components</strong>
+<i>Yefan Zhi</i>, Hua Chai, Teng Teng, Masoud Akbarzadeh
+<span class="c1">IASS 2023 <i>Melbourne, Australia</i> <a target="_blank" rel="noopener" href="https://www.ingentaconnect.com/contentone/iass/piass/2023/00002023/00000025/art00012">[Paper]</a></span></p>
+  </div>
+</div>`;
+
+
+const containerbytopic = document.getElementById('content-by-topic');
+containerbytopic.innerHTML = 
+"<h2>3D Concrete Printing (3DCP)</h2>" + J4 + J2 + C2 +
+"<h2>3DCP Structural Systems</h2>" + C6 + C5 + C4 + C3 +
+"<h2>Multi-Material Extrusion</h2>" + J3 + C7 + C1 +
+"<h2>Data-Driven Design</h2>" + J1;
+
+const containerbyyear = document.getElementById('content-by-year');
+containerbyyear.innerHTML = 
+"<h2>2025</h2>" + J4 + J3 +
+"<h2>2024</h2>" + C7 + C6 + C5 + C4 + J2 + C3 + 
+"<h2>2023</h2>" + C2 + C1 + J1;
+
+const containerbytype = document.getElementById('content-by-type');
+containerbytype.innerHTML = 
+"<h2>Journal Papers (Peer-Reviewed)</h2>" + J4 + J3 + J2 + J1 +
+"<h2>Conference Papers (Peer-Reviewed)</h2>" + C7 + C6 + C5 + C4 + C3 + C2 + C1;
+
+</script>
 
 <h1 id="Other-Projects"><a href="#Other-Projects" class="headerlink" title="Other Projects"></a>Other Projects</h1><h2 id="As-Lead-Researcher"><a href="#As-Lead-Researcher" class="headerlink" title="As Lead Researcher"></a>As Lead Researcher</h2><div class="image-text-container">
   <div>
