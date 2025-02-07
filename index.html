@@ -361,11 +361,12 @@ University of Pennsylvania
 </script>
 
 
-<h1>Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;"><span class="tab active" onclick="showTab('content-by-topic')">[By Topic]</span> <span class="tab" onclick="showTab('content-by-year')">[By Year]</span> <span class="tab" onclick="showTab('content-by-type')">[By Type]</span></span></h1>
+<h1>Peer-Reviewed Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;"><span class="tab active" onclick="showTab('content-by-topic')">[By Topic]</span> <span class="tab" onclick="showTab('content-by-year')">[By Year]</span> <span class="tab" onclick="showTab('content-by-type')">[By Type]</span> <span class="tab" onclick="showTab('content-by-role')">[By Role]</span></span></h1>
 
 <div id="content-by-topic" class="tab-content active"></div>
 <div id="content-by-year" class="tab-content"></div>
 <div id="content-by-type" class="tab-content"></div>
+<div id="content-by-role" class="tab-content"></div>
 
 <script>
 const J4 = `<!-- J4 -->
@@ -486,7 +487,7 @@ const C1 = `<!-- C1 -->
     <a href="/index/Continuous Multi-Filament 3D Printing.jpg" title="Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components" class="gallery-item" style="box-shadow: none;"> <img src="/index/Continuous Multi-Filament 3D Printing.jpg" alt="Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components"/></a>
   </div>
   <div><p><strong>Continuous Multi-Filament 3D Printing for Tension-Compression Structure Components</strong>
-<i>Yefan Zhi</i>, Hua Chai, Teng Teng, Masoud Akbarzadeh
+Teng Teng, <i>Yefan Zhi</i>, Kun-Hao Yu, Shu Yang, Masoud Akbarzadeh
 <span class="c1">IASS 2023 <i>Melbourne, Australia</i> <a target="_blank" rel="noopener" href="https://www.ingentaconnect.com/contentone/iass/piass/2023/00002023/00000025/art00012">[Paper]</a></span></p>
   </div>
 </div>`;
@@ -510,6 +511,12 @@ containerbytype.innerHTML =
 "<h2>Journal Papers (Peer-Reviewed)</h2>" + J4 + J3 + J2 + J1 +
 "<h2>Conference Papers (Peer-Reviewed)</h2>" + C7 + C6 + C5 + C4 + C3 + C2 + C1;
 
+const containerbyrole = document.getElementById('content-by-role');
+containerbyrole.innerHTML = 
+"<h2>As First Author</h2>" + J4 + J2 + C2 + J1 +
+"<h2>As Major Contributor</h2>" + C7 + J3 + C3 + C1 +
+"<h2>As Supporting Author</h2>" + C6 + C5 + C4;
+
 </script>
 
 <h1 id="Other-Projects"><a href="#Other-Projects" class="headerlink" title="Other Projects"></a>Other Projects</h1><h2 id="As-Lead-Researcher"><a href="#As-Lead-Researcher" class="headerlink" title="As Lead Researcher"></a>As Lead Researcher</h2><div class="image-text-container">
@@ -522,7 +529,7 @@ Masoud Akbarzadeh, Yiliang Shao, <i>Yefan Zhi</i>, Sepideh Bayat, Michael Ting
   </div>
 </div>
 
-<h2 id="As-Installation-Team"><a href="#As-Installation-Team" class="headerlink" title="As Installation Team"></a>As Installation Team</h2><div class="image-text-container">
+<h2 id="As-Part-of-the-Installation-Team"><a href="#As-Part-of-the-Installation-Team" class="headerlink" title="As Part of the Installation Team"></a>As Part of the Installation Team</h2><div class="image-text-container">
   <div>
     <a href="/index/Glass Bridge A Clear Path.jpg" title="Glass Bridge: A Clear Path to Sustainability" class="gallery-item" style="box-shadow: none;"> <img src="/index/Glass Bridge A Clear Path.jpg" alt="Glass Bridge: A Clear Path to Sustainability"/></a>
   </div>
