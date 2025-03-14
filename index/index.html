@@ -398,14 +398,16 @@ University of Pennsylvania
 </script>
 
 
-<h1>Peer-Reviewed Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;"><span class="tab active" onclick="showTab('content-by-topic')">[By Topic]</span> <span class="tab" onclick="showTab('content-by-year')">[By Year]</span> <span class="tab" onclick="showTab('content-by-type')">[By Type]</span> <span class="tab" onclick="showTab('content-by-role')">[By Role]</span></span></h1>
+<h1>Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;"><span class="tab active" onclick="showTab('content-by-year')">[By Year]</span> <span class="tab" onclick="showTab('content-by-topic')">[By Topic]</span> <span class="tab" onclick="showTab('content-by-type')">[By Type]</span> <span class="tab" onclick="showTab('content-by-role')">[By Role]</span></span></h1>
 
-<div id="content-by-topic" class="tab-content active"></div>
-<div id="content-by-year" class="tab-content"></div>
+<div id="content-by-year" class="tab-content active"></div>
+<div id="content-by-topic" class="tab-content"></div>
 <div id="content-by-type" class="tab-content"></div>
 <div id="content-by-role" class="tab-content"></div>
 
 <script>
+
+
 const J4 = `<!-- J4 -->
 <div class="image-text-container">
   <div>
@@ -529,32 +531,45 @@ Teng Teng, <i>Yefan Zhi</i>, Kun-Hao Yu, Shu Yang, Masoud Akbarzadeh
   </div>
 </div>`;
 
+const H1 = `<!-- H1 -->
+<div class="image-text-container">
+  <div>
+    <a href="/index/Broader Applications of Polyhedral Graphical Statics.jpg" title="Broader Applications of Polyhedral Graphical Statics" class="gallery-item" style="box-shadow: none;"> <img src="/index/Broader Applications of Polyhedral Graphical Statics.jpg" alt="Broader Applications of Polyhedral Graphical Statics"/></a>
+  </div>
+  <div><p><strong>Broader Applications of Polyhedral Graphical Statics</strong>
+Masoud Akbarzadeh, <i>Yefan Zhi</i>, Georgios Athanasopoulos, Marina Konstantatou, Maximilian E. Ororbia, Salma Mozaffari, Teng Teng, Mostafa Akbari, Hao Zheng, Hossein Mofatteh, Hamid Akbarzadeh, Armin Mirabolghasemi, Zakaria Hsain, James Pikul, Yao Lu, Shu Yang, Kun-Hao Yu, Hua Chai, Mohammad Bolhassani, Paria Yavartanoo, Allan McRobie, Joseph Robert Yost, Jen Schneider
+<span class="c1">Chapter in <i>Polyhedral Graphical Statics: For Funicular Structural Form Finding</i> by Masoud Akbarzadeh, 2025, Cambridge University Press <i>Cambridge, UK</i> <a target="_blank" rel="noopener" href="https://www.cambridge.org/us/universitypress/subjects/engineering/engineering-design-kinematics-and-robotics/polyhedral-graphical-statics-funicular-structural-form-finding">[Book]</a></span></p>
+  </div>
+</div>`;
 
 const containerbytopic = document.getElementById('content-by-topic');
 containerbytopic.innerHTML = 
 "<h2>3D Concrete Printing (3DCP)</h2>" + J4 + J2 + C2 +
 "<h2>3DCP Structural Systems</h2>" + C6 + C5 + C4 + C3 +
 "<h2>Multi-Material Extrusion</h2>" + J3 + C7 + C1 +
+"<h2>Graphic Statics</h2>" + H1 +
 "<h2>Data-Driven Design</h2>" + J1;
 
 const containerbyyear = document.getElementById('content-by-year');
 containerbyyear.innerHTML = 
-"<h2>2025</h2>" + J4 + J3 +
+"<h2>2025</h2>" + H1 + J4 + J3 +
 "<h2>2024</h2>" + C7 + C6 + C5 + C4 + J2 + C3 + 
 "<h2>2023</h2>" + C2 + C1 + J1;
 
 const containerbytype = document.getElementById('content-by-type');
 containerbytype.innerHTML = 
 "<h2>Journal Papers (Peer-Reviewed)</h2>" + J4 + J3 + J2 + J1 +
-"<h2>Conference Papers (Peer-Reviewed)</h2>" + C7 + C6 + C5 + C4 + C3 + C2 + C1;
+"<h2>Conference Papers (Peer-Reviewed)</h2>" + C7 + C6 + C5 + C4 + C3 + C2 + C1 +
+"<h2>Book Chapters</h2>" + H1;
 
 const containerbyrole = document.getElementById('content-by-role');
 containerbyrole.innerHTML = 
 "<h2>As First Author</h2>" + J4 + J2 + C2 + J1 +
-"<h2>As Major Contributor</h2>" + C7 + J3 + C3 + C1 +
+"<h2>As Major Contributor</h2>" + H1 + C7 + J3 + C3 + C1 +
 "<h2>As Supporting Author</h2>" + C6 + C5 + C4;
-
 </script>
+
+
 
 <h1 id="Other-Projects"><a href="#Other-Projects" class="headerlink" title="Other Projects"></a>Other Projects</h1><h2 id="As-Lead-Researcher"><a href="#As-Lead-Researcher" class="headerlink" title="As Lead Researcher"></a>As Lead Researcher</h2><div class="image-text-container">
   <div>
