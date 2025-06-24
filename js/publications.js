@@ -1,4 +1,28 @@
+// Under Review
 
+const surfaceToolpathTwinsOfShell = `
+<div class="image-text-container">
+  <div>
+    <img src="/index/Surface-Toolpath Twins of Shell.png" alt="Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality"/>
+  </div>
+  <div><p><strong>Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality</strong>
+<i>Yefan Zhi</i>, Masoud Akbarzadeh
+<span class="c1">Submitted to IASS 2025</span></p> 
+  </div>
+</div>`;
+
+const designToFabricationWorkflowFor = `
+<div class="image-text-container">
+  <div>
+    <img src="/index/Design-to-Fabrication Workflow for.jpg" alt="Design-to-Fabrication Workflow for 3D Concrete Printed Structures with Embedded Periodic Anticlastic Surfaces"/>
+  </div>
+  <div><p><strong>Design-to-Fabrication Workflow for 3D Concrete Printed Structures with Embedded Periodic Anticlastic Surfaces</strong>
+Hua Chai, Mathias Bernhard, <i>Yefan Zhi</i>, Maximilian E. Ororbia, Masoud Akbarzadeh
+<span class="c1">Submitted to Automation in Construction</span></p> 
+  </div>
+</div>`;
+
+// Journal Papers
 
 const dConcretePrintingOfTriply = `<!-- J5 -->
 <div class="image-text-container">
@@ -56,6 +80,8 @@ const researchOnTheVillagersBehavior = `<!-- J1 -->
 <span class="c1">Urban, Environment, Design (UED) 2023 <i>in Chinese,</i> <span class="hl">on Cover</span> <a href="https://www.researchgate.net/publication/376855865_Research_on_the_Villagers'_Behavior_Characteristics_in_Rural_Area--Analysis_Using_Spatio-Temporal_Data_from_Wi-Fi_and_Surveillance_Video">[Paper]</a></span></p>
   </div>
 </div>`;
+
+// Conference Papers
 
 const functionallyGradedArchitecturalMaterialsIntegrated = `<!-- C7 -->
 <div class="image-text-container">

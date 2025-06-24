@@ -1,62 +1,86 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 .image-text-container {
-        display: grid  !important;
-        grid-template-columns: 16% 84%  !important;
-        gap: 20px  !important;
-        align-items: center  !important;
-        margin-bottom: 10px  !important;
-    }
+    display: grid  !important;
+    grid-template-columns: 16% 84%  !important;
+    gap: 20px  !important;
+    align-items: center  !important;
+    margin-bottom: 10px  !important;
+}
 
-    .image-text-container img {
-        width: 100%  !important;
-    }
+.image-text-container img {
+    width: 100%  !important;
+}
 
-    .image-text-container p {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
+.image-text-container p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
 
-    /* Media query for narrow screens */
-    @media (max-width: 768px) {
-        .image-text-container {
-            grid-template-columns: 100%  !important; /* Stack the image and text */
-        margin-bottom: 30px  !important;
-    }
-    
-    .image-text-container img {
-        width: 100%  !important; /* Image takes full width */
-    }
-    .image-text-container p {
-        margin-top: -5px  !important;
-    }
+/* Media query for narrow screens */
+@media (max-width: 768px) {
+    .image-text-container {
+        grid-template-columns: 100%  !important; /* Stack the image and text */
+    margin-bottom: 30px  !important;
+}
 
-    }
-    .c1 {
-      /* color: #D0121B !important; */
-      /* color:rgb(119, 130, 154) !important; */
-      font-family: Roboto !important;
-      /* color: rgba(100, 100, 100, 1); */
-    }
-    
-    .hl {
-      color: #D0121B !important;
-      font-weight: bold !important;
-      font-style: italic !important;
-    }
+.image-text-container img {
+    width: 100%  !important; /* Image takes full width */
+}
+.image-text-container p {
+    margin-top: -5px  !important;
+}
 
-    a:has(img) {
-      pointer-events: none  !important;
-      cursor: default  !important;
-    }
-        .tab {
-            color: #4f7dde  !important;
-            cursor: pointer  !important;
-        }
-        .tab.active {
-            color: #000000  !important;
-        }
-        .tab-content {
-            display: none  !important;
-        }
-        .tab-content.active {
-            display: block  !important;
-        }
+}
+.c1 {
+    /* color: #D0121B !important; */
+    /* color:rgb(119, 130, 154) !important; */
+    font-family: Roboto !important;
+    /* color: rgba(100, 100, 100, 1); */
+}
+
+.hl {
+    color: #D0121B !important;
+    font-weight: bold !important;
+    font-style: italic !important;
+}
+
+a:has(img) {
+    pointer-events: none  !important;
+    cursor: default  !important;
+}
+/* a:has(img).make-clickable {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+} */
+.tab {
+    color: #4f7dde  !important;
+    cursor: pointer  !important;
+}
+.tab.active {
+    color: #000000  !important;
+}
+.tab-content {
+    display: none  !important;
+}
+.tab-content.active {
+    display: block  !important;
+}
+
+.toolpath-design-and-optimization {
+    color: #2e3192 !important;
+}
+
+.structural-systems-by-3d-concrete {
+    color: #f15a29 !important;
+}
+
+.polyhedral-graphic-statics {
+    color: #00a651 !important;
+}
+
+.modeling-and-toolpath-design-for {
+    color: #fbb040 !important;
+}
