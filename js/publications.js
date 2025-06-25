@@ -18,7 +18,7 @@ const designToFabricationWorkflowFor = `
   </div>
   <div><p><strong>Design-to-Fabrication Workflow for 3D Concrete Printed Structures with Embedded Periodic Anticlastic Surfaces</strong>
 Hua Chai, Mathias Bernhard, <i>Yefan Zhi</i>, Maximilian E. Ororbia, Masoud Akbarzadeh
-<span class="c1">Submitted to Automation in Construction</span></p> 
+<span class="c1">Submitted to Automation in Construction</span> <a href="https://psl.design.upenn.edu/project/diamanti-3d-printed-post-tensioned-concrete-canopy/">[Project Page]</a></p> 
   </div>
 </div>`;
 
