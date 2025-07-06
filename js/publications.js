@@ -7,7 +7,7 @@ const surfaceToolpathTwinsOfShell = `
   </div>
   <div><p><strong>Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality</strong>
 <i>Yefan Zhi</i>, Masoud Akbarzadeh
-<span class="c1">Submitted to IASS 2025</span></p> 
+<span class="c1"></span></p> 
   </div>
 </div>`;
 
