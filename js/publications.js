@@ -1,6 +1,7 @@
 // Under Review
 
-const surfaceToolpathTwinsOfShell = `
+const surfaceToolpathTwinsOfShell = ``;
+`
 <div class="image-text-container">
   <div>
     <img src="/index/Surface-Toolpath Twins of Shell.png" alt="Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality"/>
