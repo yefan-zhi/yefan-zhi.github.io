@@ -83,6 +83,17 @@ const researchOnTheVillagersBehavior = `<!-- J1 -->
 </div>`;
 
 // Conference Papers
+const mergedForceDiagramsForExpanded = `<!-- C8 -->
+<div class="image-text-container">
+  <div>
+    <img src="/index/Merged Force Diagrams for Expanded.jpg" alt="Merged Force Diagrams for Expanded Tension-Compression Design Space in Polyhedral Graphic Statics"/>
+  </div>
+  <div><p><strong>Merged Force Diagrams for Expanded Tension-Compression Design Space in Polyhedral Graphic Statics</strong>
+Hua Chai, Yao Lu, <i>Yefan Zhi</i>, Masoud Akbarzadeh
+<span class="c1">Advances in Architectural Geometry 2025 <i>Boston, MA, US</i></span></p>
+  </div>
+</div>
+`
 
 const functionallyGradedArchitecturalMaterialsIntegrated = `<!-- C7 -->
 <div class="image-text-container">
