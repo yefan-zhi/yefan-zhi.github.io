@@ -83,6 +83,17 @@ const researchOnTheVillagersBehavior = `<!-- J1 -->
 </div>`;
 
 // Conference Papers
+const klimastol3dPrintedCoolingChair = `<!-- C9 -->
+<div class="image-text-container">
+  <div>
+    <img src="/index/KlimaStol 3D-printed Cooling Chair.jpeg" alt="KlimaStol: 3D-printed Cooling Chair for Mitigating Outdoor Heat Stress"/>
+  </div>
+  <div><p><strong>KlimaStol: 3D-printed Cooling Chair for Mitigating Outdoor Heat Stress</strong>
+Ji Yoon Bae, <i>Yefan Zhi</i>, Eric Teitelbaum, Masoud Akbarzadeh, Dorit Aviv
+<span class="c1">ACADIA 2025 (Project Paper) <i>Miami, FL, US</i></span></p>
+  </div>
+</div>`;
+
 const mergedForceDiagramsForExpanded = `<!-- C8 -->
 <div class="image-text-container">
   <div>
