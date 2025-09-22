@@ -1,16 +1,5 @@
 // Under Review
 
-const surfaceToolpathTwinsOfShell = ``;
-`
-<div class="image-text-container">
-  <div>
-    <img src="/index/Surface-Toolpath Twins of Shell.png" alt="Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality"/>
-  </div>
-  <div><p><strong>Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality</strong>
-<i>Yefan Zhi</i>, Masoud Akbarzadeh
-<span class="c1"></span></p> 
-  </div>
-</div>`;
 
 const designToFabricationWorkflowFor = `
 <div class="image-text-container">
@@ -83,6 +72,17 @@ const researchOnTheVillagersBehavior = `<!-- J1 -->
 </div>`;
 
 // Conference Papers
+const surfaceToolpathTwinsOfShell = `<!-- C10 -->
+<div class="image-text-container">
+  <div>
+    <img src="/index/Surface-Toolpath Twins of Shell.png" alt="Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality"/>
+  </div>
+  <div><p><strong>Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality</strong>
+<i>Yefan Zhi</i>, Masoud Akbarzadeh
+<span class="c1">IASS 2025 <i>Mexico City, Mexico</i></span></p> 
+  </div>
+</div>`;
+
 const klimastol3dPrintedCoolingChair = `<!-- C9 -->
 <div class="image-text-container">
   <div>
