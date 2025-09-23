@@ -107,7 +107,7 @@ Hua Chai, Yao Lu, <i>Yefan Zhi</i>, Masoud Akbarzadeh
 `
 
 const functionallyGradedArchitecturalMaterialsIntegrated = `<!-- C7 -->
-<div class="image-text-container">
+<div class="image-text-container" id="functionallyGradedArchitecturalMaterialsIntegrated">
   <div>
     <img src="/index/Functionally Graded Architectural Materials Integrated.jpg" alt="Functionally Graded Architectural Materials: Integrated and Tailored Thermal Insulation through Gradient Multimaterial Additive Manufacturing for Masonry Architectural Components"/>
   </div>
