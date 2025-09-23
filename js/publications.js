@@ -55,7 +55,7 @@ const designing3dPrintedConcreteStructures = `<!-- J2 -->
   </div>
   <div><p><strong>Designing 3D-Printed Concrete Structures with Scaled Fabrication Models</strong>
 <i>Yefan Zhi</i>, Teng Teng, Masoud Akbarzadeh
-<span class="c1">Architectural Intelligence 2024 <a href="https://link.springer.com/article/10.1007/s44223-024-00070-3">[Paper]</a></span></p>
+<span class="c1">Architectural Intelligence 2024 <a href="https://psl.design.upenn.edu/project/designing-3d-printed-concrete-structures-with-scaled-fabrication-models/">[Project Page]</a> <a href="https://link.springer.com/article/10.1007/s44223-024-00070-3">[Paper]</a></span></p>
   </div>
 </div>`;
 
