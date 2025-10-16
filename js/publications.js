@@ -72,6 +72,17 @@ const researchOnTheVillagersBehavior = `<!-- J1 -->
 </div>`;
 
 // Conference Papers
+const advancedFiniteElementModelingOf = `<!-- C11 -->
+<div class="image-text-container">
+  <div>
+    <img src="/index/Advanced Finite Element Modeling of.jpg" alt="Surface-Toolpath Twins of Shell Components in 3D Concrete Printing for Optimized Buildability and Surface Quality"/>
+  </div>
+  <div><p><strong>Advanced Finite Element Modeling of 3D-Printed Post-Tensioned Concrete Beams with Experimental Validation</strong>
+Fahimeh Yavartanoo, Damon Bolhassani, Masoud Akbarzadeh, Maximilian E. Ororbia, Hua Chai, <i>Yefan Zhi</i>, Ibrahim Alachek, Leon Trousset, Mylene Bernard, Karolina Pajak
+<span class="c1">IASS 2025 <i>Mexico City, Mexico</i></span></p> 
+  </div>
+</div>`;
+
 const surfaceToolpathTwinsOfShell = `<!-- C10 -->
 <div class="image-text-container">
   <div>
@@ -134,7 +145,7 @@ const experimentalStudyOfAFunicular = `<!-- C5 -->
     <img src="/index/Experimental Study of a Funicular.jpg" alt="Experimental Study of a Funicular Concrete Beam Prototype"/>
   </div>
   <div><p><strong>Experimental Study of a Funicular Concrete Beam Prototype</strong>
-Maximilian Ororbia, Hua Chai, <i>Yefan Zhi</i>, Pouria Vakhshouri, Jorge Huisa Chacon, Joseph R. Yost, Mathias Bernhard, Fahimeh Yavartanoo, Javier Tapia, Damon Bolhassani, Mylene Bernard, Leon Trousset, Karolina Pajak, Blaise Waligun, Paul Kassabian, Masoud Akbarzadeh
+Maximilian E. Ororbia, Hua Chai, <i>Yefan Zhi</i>, Pouria Vakhshouri, Jorge Huisa Chacon, Joseph R. Yost, Mathias Bernhard, Fahimeh Yavartanoo, Javier Tapia, Damon Bolhassani, Mylene Bernard, Leon Trousset, Karolina Pajak, Blaise Waligun, Paul Kassabian, Masoud Akbarzadeh
 <span class="c1">IASS 2024 <i>Zurich, Switzerland</i> <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/717318">[Paper]</a></span></p>
   </div>
 </div>`;
@@ -145,7 +156,7 @@ const designApproachForAPost = `<!-- C4 -->
     <img src="/index/Design Approach for a Post.jpg" alt="Design Approach for a Post-tensioned Funicular Concrete Beam"/>
   </div>
   <div><p><strong>Design Approach for a Post-tensioned Funicular Concrete Beam</strong>
-Hua Chai, Maximilian Ororbia,<i>Yefan Zhi</i>, Ryan Welch, Billie Faircloth, Fahimeh Yavartanoo, Damon Bolhassani, Masoud Akbarzadeh
+Hua Chai, Maximilian E. Ororbia,<i>Yefan Zhi</i>, Ryan Welch, Billie Faircloth, Fahimeh Yavartanoo, Damon Bolhassani, Masoud Akbarzadeh
 <span class="c1">IASS 2024 <i>Zurich, Switzerland</i> <a href="https://app.iass2024.org/files/IASS_2024_Paper_470.pdf">[Paper]</a></span></p>
   </div>
 </div>`;
