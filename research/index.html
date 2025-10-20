@@ -312,7 +312,9 @@
 
     <div class="post-md">
         
-        <div class=".article-gallery"><h1 id="research-interests">Research Interests</h1>
+        <div class=".article-gallery"><script src="/js/publicationDataBase.js"></script>
+
+<h1 id="research-interests">Research Interests</h1>
 My research interests are outlined in the following diagram. The four components form a road map that guides my collaborators and me in integrating design-for-manufacturing strategies and computational form-finding methods to realize advanced structural systems.
 
 <div style="position: relative; max-width: 800px; margin: 0 auto; padding-top: 24px">
@@ -330,15 +332,9 @@ My research interests are outlined in the following diagram. The four components
 <h2 id="toolpath-design-and-optimization" style="color: #2e3192 !important; padding-top: 36px;">a. Automated Toolpath Design and Optimization for 3D Concrete Printing</h2>
 
 <p>3D-printed concrete structural components are known for reduced material use, enhanced construction efficiency, and design freedom. Faced with limitations in material properties and extrusion systems, we establish an integrated approach to designing and optimizing the toolpath for a given geometry while maximizing the advantages of 3D concrete printing. We provide methods of <em>predicting and optimizing buildability</em> in terms of local and global overhang, enhancing the <em>dimensional accuracy and surface quality</em>, and generating <em>as-continuous-as-possible toolpaths with minimal stop-starts</em>. By introducing <em>surface-toolpath twins</em> interconvertible through efficient slicing and surface reconstruction algorithms, we build a <em>bidirectional design-to-production process</em> to combine expertise in form-finding and fabrication-oriented design. We also propose using <em>scaled fabrication models</em> 3D-printed the same way as in actual construction to assist design iterations and communication.</p>
-<p>Selected Publications:</p>
+<p>Selected Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;">&#x2F; <span class="toolpathDesignAndOptimizationFor name-tab active" onclick="showResearchName(event, 'toolpathDesignAndOptimizationFor')">[Short Names]</span> <span class="toolpathDesignAndOptimizationFor name-tab" id="toolpathDesignAndOptimizationFor-full-name" onclick="showResearchName(event, 'toolpathDesignAndOptimizationFor')">[Full Names]</span></span></p>
 <div id="toolpathDesignAndOptimizationFor"></div>
-<script>
-const toolpathDesignAndOptimizationForContent = document.getElementById('toolpathDesignAndOptimizationFor');
-toolpathDesignAndOptimizationForContent.innerHTML = 
-automatedToolpathDesignOf3d + 
-surfaceToolpathTwinsOfShell +
-designing3dPrintedConcreteStructures;
-</script>
+
 
 <h2 id="structural-systems-by-3d-concrete" style="color: #f15a29 !important; padding-top: 36px;">b. Structural Systems by 3D Concrete Printing</h2>
 
@@ -347,15 +343,9 @@ designing3dPrintedConcreteStructures;
 <!-- porous -->
 
 <p>The use of 3D concrete printing allowed for the effective realization of innovative structural systems that integrate efficient funicular geometries with tailored functionality. By connecting form-finding results with toolpath design and optimization methods, we have designed and fabricated <em>post-tensioned concrete beam structures</em> at multiple scales, achieving <em>minimal mass</em> and <em>maximized surface area</em>. The prototypes exhibit high geometric fidelity and load-bearing capacity.</p>
-<p>Selected Publications:</p>
+<p>Selected Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;">&#x2F; <span class="structuralSystemsBy3dConcrete name-tab active" onclick="showResearchName(event, 'structuralSystemsBy3dConcrete')">[Short Names]</span> <span class="structuralSystemsBy3dConcrete name-tab" id="structuralSystemsBy3dConcrete-full-name" onclick="showResearchName(event, 'structuralSystemsBy3dConcrete')">[Full Names]</span></span></p>
 <div id="structuralSystemsBy3dConcrete"></div>
-<script>
-const structuralSystemsBy3dConcreteContent = document.getElementById('structuralSystemsBy3dConcrete');
-structuralSystemsBy3dConcreteContent.innerHTML = 
-designToFabricationWorkflowFor +
-diamanti3dPrintedPostTensioned +
-experimentalStudyOfAFunicular;
-</script>
+
 
 <h2 id="polyhedral-graphic-statics" style="color: #00a651 !important; padding-top: 36px;">c. Polyhedral Graphic Statics</h2>
 
@@ -364,27 +354,15 @@ experimentalStudyOfAFunicular;
 <!-- materialization strategies of the found forms -->
 
 <p>The form-finding method of polyhedral graphic statics (PGS) uses reciprocal force and form diagrams to design funicular structures. My research investigates strategies for <em>materializing PGS-based designs</em> across various fabrication platforms and material systems. In addition, I am particularly interested in the data structures and graph algorithms for <em>modeling tension-compression combined forms</em> in PGS.</p>
-<p>Selected Publications:</p>
+<p>Selected Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;">&#x2F; <span class="polyhedralGraphicStatics name-tab active" onclick="showResearchName(event, 'polyhedralGraphicStatics')">[Short Names]</span> <span class="polyhedralGraphicStatics name-tab" id="polyhedralGraphicStatics-full-name" onclick="showResearchName(event, 'polyhedralGraphicStatics')">[Full Names]</span></span></p>
 <div id="polyhedralGraphicStatics"></div>
-<script>
-const polyhedralGraphicStaticsContent = document.getElementById('polyhedralGraphicStatics');
-polyhedralGraphicStaticsContent.innerHTML = 
-mergedForceDiagramsForExpanded +
-broaderApplicationsOfPolyhedralGraphical;
-</script>
+
 
 <h2 id="modeling-and-toolpath-design-for" style="color: #fbb040 !important; padding-top: 36px;">d. Modeling and Toolpath Design for Multi-Material Extrusion</h2>
 
 <p>Multi-material extrusion allows complex forms to have locally tailored materials. We propose <em>modeling methods</em> that embed material information in a 3D-printable object referring to sources such as force distribution (e.g. the result of PGS) and local functionalities (e.g. variable insulation or stiffness). Leveraging <em>an integrated gradient multi-material extrusion system</em> and <em>toolpath design methods</em>, we produce multi-material obejcts with high fidelity and minimal waste, contributing to the efficient fabrication of multi-mateiral light-weight, functional structures.</p>
-<p>Selected Publications:</p>
+<p>Selected Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;">&#x2F; <span class="modelingAndToolpathDesignFor name-tab active" onclick="showResearchName(event, 'modelingAndToolpathDesignFor')">[Short Names]</span> <span class="modelingAndToolpathDesignFor name-tab" id="modelingAndToolpathDesignFor-full-name" onclick="showResearchName(event, 'modelingAndToolpathDesignFor')">[Full Names]</span></span></p>
 <div id="modelingAndToolpathDesignFor"></div>
-<script>
-const modelingAndToolpathDesignForContent = document.getElementById('modelingAndToolpathDesignFor');
-modelingAndToolpathDesignForContent.innerHTML = 
-prototypingHighFidelityMultifunctionalObjects + 
-functionallyGradedArchitecturalMaterialsIntegrated + 
-continuousMultiFilament3dPrinting;
-</script>
 
 
 <div style="padding-top:12px;"></div>
@@ -438,10 +416,19 @@ Masoud Akbarzadeh, Dorit Aviv, Frank Mateo, et al.
   </div>
   <div><p><strong>Ovenbird: Shell 3D Printing Toolpaths and GCodes</strong>
 <i>Yefan Zhi</i>, Hua Chai, Teng Teng, Masoud Akbarzadeh
-<span class="c1">A plugin for Grasshopper 2022 - 2025 <a href="https://yefan-zhi.github.io/ovenbird/">[Website]</a> <a target="_blank" rel="noopener" href="https://www.food4rhino.com/en/app/ovenbird">[Code]</a></span></p>
+<span class="c1">A plugin for Grasshopper 2022 - 2025 <a href="https://yefan-zhi.github.io/ovenbird/">[Code]</a></span></p>
   </div>
 </div>
-</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", async function() {
+        await refreshSelected("toolpathDesignAndOptimizationFor");
+        await refreshSelected("structuralSystemsBy3dConcrete");
+        await refreshSelected("polyhedralGraphicStatics");
+        await refreshSelected("modelingAndToolpathDesignFor");
+    });
+</script></div>
     </div>
 
     <div class="post-meta">

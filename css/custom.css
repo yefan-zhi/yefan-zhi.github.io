@@ -55,11 +55,13 @@ a:has(img) {
   pointer-events: auto !important;
   cursor: pointer !important;
 } */
-.tab {
+.tab,
+.name-tab {
     color: #4f7dde  !important;
     cursor: pointer  !important;
 }
-.tab.active {
+.tab.active,
+.name-tab.active {
     color: #000000  !important;
 }
 .tab-content {

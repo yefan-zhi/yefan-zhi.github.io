@@ -312,130 +312,46 @@
 
     <div class="post-md">
         
-        <div class=".article-gallery"><script>
-    function showTab(tabId) {
-        document.querySelectorAll('.tab-content').forEach(tab => {
-            tab.classList.remove('active');
-        });
-        document.getElementById(tabId).classList.add('active');
+        <div class=".article-gallery"><script src="/js/publicationDataBase.js"></script>
 
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.classList.remove('active');
-        });
-        event.target.classList.add('active');
-    }
-</script>
+<h1>Publications
+<span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;">
+<!-- &nbsp; -->
+/
+<span class="tab active" id='content-by-featured' onclick="showTab(event)">[By Featured]</span>
+<span class="tab" id='content-by-year' onclick="showTab(event)">[By Year]</span>
+<span class="tab" id='content-by-topic' onclick="showTab(event)">[By Topic]</span>
+<span class="tab" id='content-by-type' onclick="showTab(event)">[By Type]</span>
+<span class="tab" id='content-by-role' onclick="showTab(event)">[By Role]</span>
+<!-- &nbsp; -->
+/
+<span class="name-tab active" onclick="showName(event)">[Short Names]</span>
+<span class="name-tab" id="full-name" onclick="showName(event)">[Full Names]</span>
+</span>
+</h1>
 
-<h1>Publications <span class="c1" style="font-size: 1rem;line-height: 1.2;font-weight: 400;"><span class="tab active" onclick="showTab('content-by-year')">[By Year]</span> <span class="tab" onclick="showTab('content-by-topic')">[By Topic]</span> <span class="tab" onclick="showTab('content-by-type')">[By Type]</span> <span class="tab" onclick="showTab('content-by-role')">[By Role]</span></span></h1>
+<div id="research-list"></div>
 
-<div id="content-by-year" class="tab-content active"></div>
-<div id="content-by-topic" class="tab-content"></div>
-<div id="content-by-type" class="tab-content"></div>
-<div id="content-by-role" class="tab-content"></div>
 
 <script>
-
-const containerbyyear = document.getElementById('content-by-year');
-containerbyyear.innerHTML = 
-"<h2>Under Review</h2>" + 
-designToFabricationWorkflowFor +
-"<h2>2025</h2>" + 
-advancedFiniteElementModelingOf +
-surfaceToolpathTwinsOfShell +
-klimastol3dPrintedCoolingChair +
-mergedForceDiagramsForExpanded +
-dConcretePrintingOfTriply +
-broaderApplicationsOfPolyhedralGraphical + 
-automatedToolpathDesignOf3d + 
-prototypingHighFidelityMultifunctionalObjects +
-"<h2>2024</h2>" + 
-functionallyGradedArchitecturalMaterialsIntegrated + 
-theEffectOfPostTensioning + 
-experimentalStudyOfAFunicular + 
-designApproachForAPost + 
-designing3dPrintedConcreteStructures + 
-diamanti3dPrintedPostTensioned + 
-"<h2>2023</h2>" + 
-localOptimizationOfSelfSupporting + 
-continuousMultiFilament3dPrinting + 
-researchOnTheVillagersBehavior;
-
-const containerbytopic = document.getElementById('content-by-topic');
-containerbytopic.innerHTML = 
-"<h2>3D Concrete Printing</h2>" + 
-surfaceToolpathTwinsOfShell +
-dConcretePrintingOfTriply +
-automatedToolpathDesignOf3d + 
-designing3dPrintedConcreteStructures + 
-localOptimizationOfSelfSupporting +
-"<h2>Structural Systems by 3D Concrete Printing</h2>" + 
-advancedFiniteElementModelingOf +
-klimastol3dPrintedCoolingChair +
-designToFabricationWorkflowFor +
-theEffectOfPostTensioning + 
-experimentalStudyOfAFunicular + 
-designApproachForAPost + 
-diamanti3dPrintedPostTensioned +
-"<h2>Multi-Material Extrusion</h2>" + 
-prototypingHighFidelityMultifunctionalObjects + 
-functionallyGradedArchitecturalMaterialsIntegrated + 
-continuousMultiFilament3dPrinting +
-"<h2>Polyhedral Graphic Statics</h2>" + 
-mergedForceDiagramsForExpanded +
-broaderApplicationsOfPolyhedralGraphical +
-"<h2>Data-Driven Design</h2>" + 
-researchOnTheVillagersBehavior;
-
-const containerbytype = document.getElementById('content-by-type');
-containerbytype.innerHTML = 
-"<h2>Under Review</h2>" + 
-designToFabricationWorkflowFor +
-"<h2>Journal Papers (Peer-Reviewed)</h2>" + 
-dConcretePrintingOfTriply +
-automatedToolpathDesignOf3d + 
-prototypingHighFidelityMultifunctionalObjects + 
-designing3dPrintedConcreteStructures + 
-researchOnTheVillagersBehavior +
-"<h2>Conference Papers (Peer-Reviewed)</h2>" + 
-advancedFiniteElementModelingOf +
-surfaceToolpathTwinsOfShell +
-klimastol3dPrintedCoolingChair +
-mergedForceDiagramsForExpanded +
-functionallyGradedArchitecturalMaterialsIntegrated + 
-theEffectOfPostTensioning + 
-experimentalStudyOfAFunicular + 
-designApproachForAPost + 
-diamanti3dPrintedPostTensioned + 
-localOptimizationOfSelfSupporting + 
-continuousMultiFilament3dPrinting +
-"<h2>Book Chapters</h2>" + 
-broaderApplicationsOfPolyhedralGraphical;
-
-const containerbyrole = document.getElementById('content-by-role');
-containerbyrole.innerHTML = 
-"<h2>As First Author</h2>" + 
-surfaceToolpathTwinsOfShell +
-automatedToolpathDesignOf3d + 
-designing3dPrintedConcreteStructures + 
-localOptimizationOfSelfSupporting + 
-researchOnTheVillagersBehavior +
-"<h2>As Major Contributor</h2>" + 
-designToFabricationWorkflowFor +
-broaderApplicationsOfPolyhedralGraphical + 
-functionallyGradedArchitecturalMaterialsIntegrated + 
-prototypingHighFidelityMultifunctionalObjects + 
-diamanti3dPrintedPostTensioned + 
-continuousMultiFilament3dPrinting +
-"<h2>As Supporting Author</h2>" + 
-advancedFiniteElementModelingOf +
-klimastol3dPrintedCoolingChair +
-mergedForceDiagramsForExpanded +
-dConcretePrintingOfTriply +
-theEffectOfPostTensioning + 
-experimentalStudyOfAFunicular + 
-designApproachForAPost;
-</script>
-</div>
+    async function scrollToHashWhenReady(hash, { tries = 60, interval = 50 } = {}) {
+        if (!hash) return false;
+        for (let i = 0; i < tries; i++) {
+            const el = document.querySelector(hash);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+                return true;
+            }
+            await new Promise(r => setTimeout(r, interval));
+        }
+        return false; // target never appeared
+    }
+    document.addEventListener("DOMContentLoaded", async function() {
+        await refresh();    // insert your content
+        await new Promise(r => requestAnimationFrame(r));
+        await scrollToHashWhenReady(location.hash);  
+    });
+</script></div>
     </div>
 
     <div class="post-meta">
