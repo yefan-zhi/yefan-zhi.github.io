@@ -99,7 +99,7 @@ async function showByFeatured(fullNameSwitch) {
 }
 
 async function showByYear(fullNameSwitch) {
-    await showByKey(fullNameSwitch, 'year', ["Under ReviewUnder Review"]);
+    await showByKey(fullNameSwitch, 'year', ["Under Review"]);
 }
 
 async function showByTopic(fullNameSwitch) {
@@ -114,7 +114,11 @@ async function showByRole(fullNameSwitch) {
     await showByKey(fullNameSwitch, "role", ["As First Author", "As Major Contributor", "As Supporting Author"]);
 }
 
-async function showByKey(fullNameSwitch, keyString, defaultKeys) {
+async function showByVenue(fullNameSwitch) {
+    await showByKey(fullNameSwitch, "venue_full", ["Under Review"], ["Book Chapters"], false);
+}
+
+async function showByKey(fullNameSwitch, keyString, defaultKeys, lastKeys = [], keyReverse = true) {
 
     const container = document.getElementById('research-list');
     const publications = await loadData();
@@ -130,14 +134,16 @@ async function showByKey(fullNameSwitch, keyString, defaultKeys) {
     var allKeys = defaultKeys.slice();
 
     var sortedKeys = Object.keys(dict).sort();
-    sortedKeys.reverse();
+    if (keyReverse)
+        sortedKeys.reverse();
 
     for (var i = 0; i < sortedKeys.length; i++) {
         var key = sortedKeys[i];
-        if (!allKeys.includes(key)) {
+        if (!allKeys.includes(key) && !lastKeys.includes(key)) {
             allKeys.push(key);
         }
     }
+    allKeys = [...allKeys, ...lastKeys];
 
     for (var i = 0; i < allKeys.length; i++) {
         var key = allKeys[i];
@@ -176,6 +182,7 @@ function refresh() {
     else if (isActive('content-by-topic')) { showByTopic(fullNameSwitch); }
     else if (isActive('content-by-type')) { showByType(fullNameSwitch); }
     else if (isActive('content-by-role')) { showByRole(fullNameSwitch); }
+    else if (isActive('content-by-venue')) { showByVenue(fullNameSwitch); }
 }
 
 async function refreshSelected(keyString) {
@@ -187,7 +194,7 @@ async function refreshSelected(keyString) {
     var container = document.getElementById(keyString);
     const titles = research.find(r => r.name === keyString).titles;
     var pubs = [];
-    for (var i = 0; i < titles.length; i++) { 
+    for (var i = 0; i < titles.length; i++) {
         pubs.push(publications.find(r => r.title === titles[i]));
     }
     container.innerHTML = pubs.map(pub => renderItem(pub, fullNameSwitch)).join('');
