@@ -1,35 +1,34 @@
-function formatAuthors(authorString, fullNames) {
-    if (!fullNames) {
-        var authors = authorString.split(",");
-        var tail = "";
-        if (authors.length > 5) {
-            authors = authors.slice(0, 5);
-            tail = " et al.";
-        }
+function simpligyFirstNameSingleWordWithHyphen(firstName) {
+    return firstName.split("-").map(part => part.charAt(0) + ".").join("-");
+}
 
-        var result = [];
-        for (var i = 0; i < authors.length; i++) {
-            var name = authors[i].trim().replace(/-/g, " "); // replace "-" with space
-            var parts = name.split(/\s+/);
+function simplifyFirstName(firstName) {
+    return firstName.split(/\s+/).map(part => simpligyFirstNameSingleWordWithHyphen(part)).join(" ");
+}
 
-            if (parts.length === 0) continue;
-
-            var lastName = parts[parts.length - 1];
-            var initials = [];
-
-            // take initials for all given names except the last
-            for (var j = 0; j < parts.length - 1; j++) {
-                var ch = parts[j].charAt(0);
-                if (ch) initials.push(ch + ". ");
-            }
-
-            result.push(initials.join("") + lastName);
-        }
-
-        return result.join(", ").replace("Y. Zhi", "<i>Y. Zhi</i>") + tail;
+function formatAuthorSingle(author, fullName) {
+    if (fullName) {
+        if (author === "Yefan Zhi") return "<i>Yefan Zhi</i>"
+        return author.replace("|", "");
     } else {
-        return authorString.replace("Yefan Zhi", "<i>Yefan Zhi</i>");
+        if (author === "Yefan Zhi") return "<i>Y. Zhi</i>"
+
+        var sep = author.lastIndexOf("|");
+        if (sep === -1) sep = author.lastIndexOf(" ");
+        var firstName = author.slice(0, sep);
+        var lastName = author.slice(sep + 1);
+        return simplifyFirstName(firstName) + " " + lastName;
     }
+}
+
+function formatAuthors(authorString, fullNames) {
+    var authors = authorString.split(", ");
+    var tail = "";
+    if (authors.length > 5) {
+        authors = authors.slice(0, 5);
+        tail = " et al.";
+    }
+    return authors.map(author => formatAuthorSingle(author, fullNames)).join(", ") + tail;
 }
 
 function renderItem(pub, fullNames) {
