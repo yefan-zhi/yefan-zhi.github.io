@@ -9,7 +9,7 @@ function simplifyFirstName(firstName) {
 function formatAuthorSingle(author, fullName) {
     if (fullName) {
         if (author === "Yefan Zhi") return "<i>Yefan Zhi</i>"
-        return author.replace("|", "");
+        return author.replace("|", " ");
     } else {
         if (author === "Yefan Zhi") return "<i>Y. Zhi</i>"
 
@@ -24,7 +24,7 @@ function formatAuthorSingle(author, fullName) {
 function formatAuthors(authorString, fullNames) {
     var authors = authorString.split(", ");
     var tail = "";
-    if (authors.length > 5) {
+    if (!fullNames && authors.length > 5) {
         authors = authors.slice(0, 5);
         tail = " et al.";
     }
