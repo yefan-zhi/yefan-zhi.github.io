@@ -94,7 +94,7 @@ async function loadResearchData() {
 }
 
 async function showByFeatured(fullNameSwitch) {
-    await showByKey(fullNameSwitch, 'featured', ["Featured", "Other Publications"]);
+    await showByKey(fullNameSwitch, 'featured', ["Representative Works", "Featured", "Other Publications"]);
 }
 
 async function showByYear(fullNameSwitch) {
