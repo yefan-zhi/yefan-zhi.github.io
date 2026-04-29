@@ -8,10 +8,10 @@ function simplifyFirstName(firstName) {
 
 function formatAuthorSingle(author, fullName) {
     if (fullName) {
-        if (author === "Yefan Zhi") return "<i>Yefan Zhi</i>"
+        if (author === "Yefan Zhi") return "<u><i>Yefan Zhi</i></u>"
         return author.replace("|", " ");
     } else {
-        if (author === "Yefan Zhi") return "<i>Y. Zhi</i>"
+        if (author === "Yefan Zhi") return "<u><i>Y. Zhi</i></u>"
 
         var sep = author.lastIndexOf("|");
         if (sep === -1) sep = author.lastIndexOf(" ");
