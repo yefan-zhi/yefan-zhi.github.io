@@ -106,7 +106,7 @@ async function showByTopic(fullNameSwitch) {
 }
 
 async function showByType(fullNameSwitch) {
-    await showByKey(fullNameSwitch, "type", ["Under Review", "Journal Papers (Peer-Reviewed)", "Conference Papers (Peer-Reviewed)", "Book Chapters"]);
+    await showByKey(fullNameSwitch, "type", ["Under Review", "Preprints", "Journal Papers (Peer-Reviewed)", "Conference Papers (Peer-Reviewed)", "Book Chapters"]);
 }
 
 async function showByRole(fullNameSwitch) {
@@ -114,7 +114,7 @@ async function showByRole(fullNameSwitch) {
 }
 
 async function showByVenue(fullNameSwitch) {
-    await showByKey(fullNameSwitch, "venue_full", ["Under Review"], ["Book Chapters"], false);
+    await showByKey(fullNameSwitch, "venue_full", ["Under Review", "Preprint"], ["Book Chapters"], false);
 }
 
 async function showByKey(fullNameSwitch, keyString, defaultKeys, lastKeys = [], keyReverse = true) {
