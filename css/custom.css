@@ -47,6 +47,11 @@ html {
     font-style: italic !important;
 }
 
+.yf {
+    font-style: italic !important;
+    text-decoration: underline !important;
+}
+
 a:has(img) {
     pointer-events: none  !important;
     cursor: default  !important;
