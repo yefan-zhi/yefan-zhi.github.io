@@ -59,6 +59,12 @@ function renderItem(pub, fullNames) {
             }
         }
     }
+
+    // Copy the bibtex string to the clipboard when clicking the bibtex link
+    if (pub.bibtex) {
+        parts.push(`<a href="#" onclick="navigator.clipboard.writeText(\`${pub.bibtex}\`); alert('BibTeX copied to clipboard!'); return false;">[BibTeX]</a>`);
+    }
+
     var linksStr = parts.join(" ");
     if (linksStr) {
         c1 += ` ${linksStr}`;
