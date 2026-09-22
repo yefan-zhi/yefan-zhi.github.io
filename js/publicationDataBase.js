@@ -55,6 +55,9 @@ function renderItem(pub, fullNames) {
         var obj = pub.links[i];
         for (var key in obj) {
             if (obj.hasOwnProperty(key)) {
+                // var isProjectPage = key.trim().toLowerCase() === "project page";
+                // var className = isProjectPage ? ' class="project-page-link"' : "";
+                // parts.push(`<a href="${obj[key]}"${className}>[${key}]</a>`);
                 parts.push(`<a href="${obj[key]}">[${key}]</a>`);
             }
         }
@@ -71,7 +74,7 @@ function renderItem(pub, fullNames) {
     }
 
     var shortTitleWords = pub.title.replace(':', '').split(' ').slice(0, 5);
-    return `<!-- ${pub.type_key} -->
+    return `<!-- id=${pub.id} type_key=${pub.type_key} -->
 <div class="image-text-container" id=${shortTitleWords.join("")}>
 <div>
 <img src="/index/${shortTitleWords.join(' ')}.jpg" alt="${pub.title}"/>

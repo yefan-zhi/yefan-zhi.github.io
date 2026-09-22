@@ -48,6 +48,11 @@ html {
     font-style: italic !important;
 }
 
+.post-md a.project-page-link,
+.project-page-link {
+    color: #D0121B !important;
+}
+
 .yf {
     font-style: italic !important;
     text-decoration: underline !important;
