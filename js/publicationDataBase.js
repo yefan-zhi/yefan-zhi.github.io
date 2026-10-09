@@ -74,8 +74,9 @@ function renderItem(pub, fullNames) {
     }
 
     var shortTitleWords = pub.title.replace(':', '').split(' ').slice(0, 5);
+    var anchorId = shortTitleWords.join("");
     return `<!-- id=${pub.id} type_key=${pub.type_key} -->
-<div class="image-text-container" id=${shortTitleWords.join("")}>
+<div class="image-text-container" id="${anchorId}">
 <div>
 <img src="/index/${shortTitleWords.join(' ')}.jpg" alt="${pub.title}"/>
 </div>
@@ -183,14 +184,14 @@ function showName(e) {
     refresh();
 }
 
-function refresh() {
+async function refresh() {
     var fullNameSwitch = isActive('full-name');
-    if (isActive('content-by-featured')) { showByFeatured(fullNameSwitch); }
-    else if (isActive('content-by-year')) { showByYear(fullNameSwitch); }
-    else if (isActive('content-by-topic')) { showByTopic(fullNameSwitch); }
-    else if (isActive('content-by-type')) { showByType(fullNameSwitch); }
-    else if (isActive('content-by-role')) { showByRole(fullNameSwitch); }
-    else if (isActive('content-by-venue')) { showByVenue(fullNameSwitch); }
+    if (isActive('content-by-featured')) { return await showByFeatured(fullNameSwitch); }
+    else if (isActive('content-by-year')) { return await showByYear(fullNameSwitch); }
+    else if (isActive('content-by-topic')) { return await showByTopic(fullNameSwitch); }
+    else if (isActive('content-by-type')) { return await showByType(fullNameSwitch); }
+    else if (isActive('content-by-role')) { return await showByRole(fullNameSwitch); }
+    else if (isActive('content-by-venue')) { return await showByVenue(fullNameSwitch); }
 }
 
 async function refreshSelected(keyString) {

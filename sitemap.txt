@@ -1,9 +1,10 @@
+https://yefan-zhi.github.io/publications/index.html
+https://yefan-zhi.github.io/index/index.html
+https://yefan-zhi.github.io/research/index.html
+https://yefan-zhi.github.io/projects/index.html
 https://yefan-zhi.github.io/publications.json
 https://yefan-zhi.github.io/publications%20copy.json
 https://yefan-zhi.github.io/teaching/index.html
 https://yefan-zhi.github.io/research.json
 https://yefan-zhi.github.io/2026/09/19/Hello%20World/
-https://yefan-zhi.github.io/publications/index.html
-https://yefan-zhi.github.io/index/index.html
-https://yefan-zhi.github.io/research/index.html
 https://yefan-zhi.github.io/
