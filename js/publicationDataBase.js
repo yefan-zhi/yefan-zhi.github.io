@@ -32,7 +32,10 @@ function formatAuthors(authorString, fullNames) {
 }
 
 function renderItem(pub, fullNames) {
-    var authors = formatAuthors(pub.authors, fullNames);
+    var authorsShort = formatAuthors(pub.authors, false);
+    var authorsFull = formatAuthors(pub.authors, true);
+    var shortDisplay = fullNames ? "none" : "inline";
+    var fullDisplay = fullNames ? "inline" : "none";
 
     var venues = [];
     if (pub.venue) venues.push(pub.venue);
@@ -80,9 +83,7 @@ function renderItem(pub, fullNames) {
 <div>
 <img src="/index/${shortTitleWords.join(' ')}.jpg" alt="${pub.title}"/>
 </div>
-<div><p><strong>${pub.title}</strong>
-${authors}
-<span class="c1">${c1}</span></p>
+<div><p><strong>${pub.title}</strong><br><span class="authors-short" style="display:${shortDisplay};">${authorsShort}</span><span class="authors-full" style="display:${fullDisplay};">${authorsFull}</span><br><span class="c1">${c1}</span></p>
 </div>
 </div>`;
 }
@@ -195,9 +196,10 @@ async function refresh() {
 }
 
 async function refreshSelected(keyString) {
-    const publications = await loadData();
-    const research = await loadResearchData();
+    return refreshSelectedWithData(keyString, await loadData(), await loadResearchData());
+}
 
+function refreshSelectedWithData(keyString, publications, research) {
     var fullNameSwitch = isActive(keyString + "-full-name");
 
     var container = document.getElementById(keyString);
@@ -209,10 +211,107 @@ async function refreshSelected(keyString) {
     container.innerHTML = pubs.map(pub => renderItem(pub, fullNameSwitch)).join('');
 }
 
+function waitForImagesWithin(container) {
+    if (!container) return Promise.resolve();
+    var images = Array.from(container.querySelectorAll('img'));
+    var pending = images.filter(img => !img.complete);
+    if (pending.length === 0) return Promise.resolve();
+
+    return Promise.all(
+        pending.map(
+            img =>
+                new Promise(resolve => {
+                    img.addEventListener('load', resolve, { once: true });
+                    img.addEventListener('error', resolve, { once: true });
+                }),
+        ),
+    );
+}
+
+function captureElementAnchor(el, keyString) {
+    if (!el) {
+        return {
+            selector: null,
+            offsetTop: 0,
+            scrollY: window.pageYOffset,
+        };
+    }
+
+    var isFull = !!el.id && el.id === keyString + '-full-name';
+    var selector = isFull
+        ? '#' + keyString + '-full-name'
+        : '.name-tab.' + keyString + ':not([id$="-full-name"])';
+
+    var rect = el.getBoundingClientRect();
+    return {
+        selector: selector,
+        offsetTop: rect.top,
+        scrollY: window.pageYOffset,
+    };
+}
+
+function restoreElementAnchor(snapshot) {
+    if (!snapshot) return;
+
+    if (snapshot.selector) {
+        var anchorNode = document.querySelector(snapshot.selector);
+        if (anchorNode) {
+            var rect = anchorNode.getBoundingClientRect();
+            var delta = rect.top - snapshot.offsetTop;
+            window.scrollTo({ top: Math.max(0, window.pageYOffset + delta), behavior: 'instant' });
+            return;
+        }
+    }
+
+    window.scrollTo({ top: snapshot.scrollY || 0, behavior: 'instant' });
+}
+
+function restoreElementAnchorIfNeeded(snapshot, thresholdPx) {
+    if (!snapshot || !snapshot.selector) return;
+    var anchorNode = document.querySelector(snapshot.selector);
+    if (!anchorNode) return;
+
+    var rect = anchorNode.getBoundingClientRect();
+    var delta = rect.top - snapshot.offsetTop;
+    var threshold = typeof thresholdPx === 'number' ? thresholdPx : 0.75;
+    if (Math.abs(delta) <= threshold) return;
+
+    // 'instant' bypasses the site-wide CSS scroll-behavior: smooth.
+    window.scrollBy({ top: delta, left: 0, behavior: 'instant' });
+}
+
 function showResearchName(e, keyString) {
-    document.querySelectorAll('.name-tab').forEach(tab => {
-        if (tab.classList.contains(keyString)) tab.classList.remove('active');
-    });
-    e.target.classList.add('active');
-    refreshSelected(keyString);
+    const target = e && e.target ? e.target : null;
+    const clickedAnchor = captureElementAnchor(target, keyString);
+    const clickedFullName = !!(target && target.id === keyString + "-full-name");
+    var root = document.documentElement;
+    var prevOverflowAnchor = root.style.overflowAnchor;
+    root.style.overflowAnchor = 'none';
+
+    const keyStrings = Array.from(document.querySelectorAll('.name-tab[id$="-full-name"]'))
+        .map(tab => tab.id.replace(/-full-name$/, ''));
+
+    for (var i = 0; i < keyStrings.length; i++) {
+        var key = keyStrings[i];
+        var fullTab = document.getElementById(key + "-full-name");
+        var shortTab = document.querySelector('.name-tab.' + key + ':not([id$="-full-name"])');
+
+        if (fullTab) fullTab.classList.toggle('active', clickedFullName);
+        if (shortTab) shortTab.classList.toggle('active', !clickedFullName);
+    }
+
+    for (var j = 0; j < keyStrings.length; j++) {
+        var container = document.getElementById(keyStrings[j]);
+        if (!container) continue;
+
+        container.querySelectorAll('.authors-short').forEach(el => {
+            el.style.display = clickedFullName ? 'none' : 'inline';
+        });
+        container.querySelectorAll('.authors-full').forEach(el => {
+            el.style.display = clickedFullName ? 'inline' : 'none';
+        });
+    }
+
+    restoreElementAnchorIfNeeded(clickedAnchor, 0.75);
+    root.style.overflowAnchor = prevOverflowAnchor;
 }
