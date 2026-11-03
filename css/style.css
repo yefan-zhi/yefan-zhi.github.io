@@ -23,7 +23,9 @@ body
     line-height: 1.7;
     /* letter-spacing: 0.6px; */
     color: var(--font-color-1);
-    background: #e4e4e4;
+    /* background: #e4e4e4; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-background, #e4e4e4);
     height: 100%;
 }
 
@@ -38,7 +40,9 @@ a
 .paper
 {
     padding: 4vw;
-    background: #e4e4e4;
+    /* background: #e4e4e4; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-background, #e4e4e4);
     min-height: 100vh;
 }
 .paper-main
@@ -49,11 +53,17 @@ a
     /* padding: 36px 4vw 0px; 上 宽 第 */
     padding: 4.5vw 4.5vw 4.5vw;
 
-    background: #fff;
+    /* background: #fff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-postBackGround, #fff);
     /*border-radius: 24px;*/
     border-radius: 0px;
-    background: #ffffff;
-    box-shadow:  0px 5px 13px #616161, -5px -5px 13px #ffffff;
+    /* background: #ffffff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-postBackGround, #ffffff);
+    /* box-shadow:  0px 5px 13px #616161, -5px -5px 13px #ffffff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    box-shadow:  0px 5px 13px var(--c-shadow, #616161), -5px -5px 13px var(--c-shadowLight, #ffffff);
 }
 .index-main
 {
@@ -63,8 +73,12 @@ a
     /* padding: 36px 4.5vw 0px; */
     padding: 4.5vw 4.5vw 4.5vw;
     border-radius: 0px;
-    background: #ffffff;
-    box-shadow:  0px 5px 13px #616161, -5px -5px 13px #ffffff;
+    /* background: #ffffff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-indexBackGround, #ffffff);
+    /* box-shadow:  0px 5px 13px #616161, -5px -5px 13px #ffffff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    box-shadow:  0px 5px 13px var(--c-shadow, #616161), -5px -5px 13px var(--c-shadowLight, #ffffff);
 }
 
 .index-header-line
@@ -172,8 +186,12 @@ a
     display: block;
     padding: 10px 20px 8px;
     border-radius: 18px;
-    background: #fff;
-    border: 1px solid #eee;
+    /* background: #fff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surface, #fff);
+    /* border: 1px solid #eee; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    border: 1px solid var(--c-border, #eee);
     margin: 8px 0;
     /* transition: background ease-in-out .5s; */
 }
@@ -279,15 +297,21 @@ a
     display: block;
     padding: 8px 16px;
     border-radius: 18px;
-    background: #fff;
-    border: 1px solid #eee;
+    /* background: #fff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surface, #fff);
+    /* border: 1px solid #eee; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    border: 1px solid var(--c-border, #eee);
 }
 .paginator .space
 {
     display: block;
     padding: 8px 16px;
     border-radius: 18px;
-    background: #fff;
+    /* background: #fff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surface, #fff);
     border: none;
 }
 .paginator a
@@ -353,7 +377,9 @@ a
 {
     padding-top: 0px;
     /* padding-top: 6px; */
-    color: black;
+    /* color: black; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-font, black);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -441,7 +467,9 @@ a
     font-weight: 600;
     line-height: 1.5;
     /* color: var(--font-color-1); */
-    color: black !important;
+    /* color: black !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-font, black) !important;
 }
 .post-head-meta-center
 {
@@ -489,11 +517,15 @@ a
 }
 .archive li:nth-child(odd)
 {
-    background: #fafafa;
+    /* background: #fafafa; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surfaceAlt, #fafafa);
 }
 .archive li:nth-child(even)
 {
-    background: #fff;
+    /* background: #fff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surface, #fff);
 }
 .archive li span
 {
@@ -560,7 +592,9 @@ a
 }
 .circle-black {
     padding: 40px 25px 50px;
-    border: solid 1px rgb(0, 0, 0);
+    /* border: solid 1px rgb(0, 0, 0); */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    border: solid 1px var(--c-font, rgb(0, 0, 0));
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
@@ -573,7 +607,9 @@ a
     font-size: larger;
 }
 .poem span {
-    color: #000
+    /* color: #000 */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-font, #000)
 }
 
 /* comment*/
@@ -586,9 +622,13 @@ a
     max-width: 880px;
     margin: 0 auto;
     padding: 72px 8vw 24px;
-    background: #fff;
+    /* background: #fff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surface, #fff);
     border-radius: 24px;
-    background: #fff;
+    /* background: #fff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surface, #fff);
 }
 
 
@@ -608,41 +648,57 @@ a
 
 /* list页面 标签访问过后的颜色 */
 .archive-main a:link { 
-    color:#4f7dde; 
+    /* color:#4f7dde; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color:var(--c-blue, #4f7dde);
     text-decoration:none; 
 } 
 
 .archive-main a:visited { 
-    color:#9c9caf; 
+    /* color:#9c9caf; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color:var(--c-muted, #9c9caf);
     text-decoration: underline; 
 } 
 .archive-main a:hover {
-    color:#000000;
+    /* color:#000000; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color:var(--c-font, #000000);
     text-decoration: underline; 
 }
 
 .index-header a:link { 
-    color:#000000; 
+    /* color:#000000; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color:var(--c-font, #000000);
     text-decoration:none; 
 } 
 
 .index-header a:visited { 
-    color:#9c9caf; 
+    /* color:#9c9caf; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color:var(--c-muted, #9c9caf);
     text-decoration: underline; 
 } 
 
 .index-header a:hover {
-    color:rgb(0, 0, 0);
+    /* color:rgb(0, 0, 0); */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color:var(--c-font, rgb(0, 0, 0));
     text-decoration: underline; 
 }
 
 .header a:link {
-    color:rgb(0, 0, 0);
+    /* color:rgb(0, 0, 0); */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color:var(--c-font, rgb(0, 0, 0));
     text-decoration: none; 
 }
 
 .header a:hover {
-    color:rgb(0, 0, 0);
+    /* color:rgb(0, 0, 0); */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color:var(--c-font, rgb(0, 0, 0));
     text-decoration: underline; 
 }
 
@@ -652,7 +708,9 @@ a
 /* header相关 */
 .description {
     font-size: smaller;
-    color: #9c9caf;
+    /* color: #9c9caf; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-muted, #9c9caf);
     margin-top: -24px;
 }
 
@@ -718,7 +776,9 @@ margin-left: 10px; /* 调整a标签和span之间的距离 */
 }
 
 .year-font-color {
-    color: black !important;
+    /* color: black !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-font, black) !important;
 }
 
 @media print {
@@ -746,4 +806,29 @@ margin-left: 10px; /* 调整a标签和span之间的距离 */
 .darkmode-ignore{
     isolation:isolate;
     display: initial;
+}
+/* 新增：主题切换按钮样式（替代 darkmode.js 的 .darkmode-toggle，外观与位置保持一致） */
+/* New: theme toggle button styles (replaces darkmode.js .darkmode-toggle with the same look and position) */
+.theme-toggle {
+    position: fixed;
+    left: 42px;
+    bottom: 40px;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background: var(--c-toggleBg, #100f2c);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    z-index: 500;
+    transition: background 0.3s ease;
+}
+@media print {
+    .theme-toggle {
+        display: none;
+    }
 }

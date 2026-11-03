@@ -21,7 +21,9 @@
 {
     /* font-size: 2.5rem; */
     font-size: 1.5rem;
-    color: #D0121B !important; 
+    /* color: #D0121B !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-accent, #D0121B) !important;
     
     line-height: 1;
     /* padding: 24px 0; */
@@ -31,7 +33,9 @@
 {
     /* font-size: 2rem; */
     font-size: 1.2rem;
-    color: #D0121B !important; 
+    /* color: #D0121B !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-accent, #D0121B) !important;
     line-height: 1.5;
     padding: 12px 0px 0px;
     font-style: italic !important;
@@ -64,7 +68,9 @@
 .post-md a
 {
     /* color: var(--font-color-2); */
-    color: #4f7dde !important;
+    /* color: #4f7dde !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-blue, #4f7dde) !important;
     /* text-decoration: underline; */
     /* box-shadow: 0 2px 0 var(--line-1); */
     /* transition: color ease-in-out .65s, box-shadow ease-in-out .65s; */
@@ -89,8 +95,12 @@
 {
     padding: 2px 4px;
     border-radius: 2px;
-    background: #eee;
-    border: 1px solid #ddd;
+    /* background: #eee; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surfaceHover, #eee);
+    /* border: 1px solid #ddd; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    border: 1px solid var(--c-line2, #ddd);
 }
 .post-md ol
 {
@@ -154,21 +164,29 @@
 {
     padding: 12px 0;
     border-bottom: 1px solid var(--line-1);
-    background: #fafafa;
+    /* background: #fafafa; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surfaceAlt, #fafafa);
 }
 .post-md table tr:nth-child(even) td
 {
     padding: 12px 0;
     border-bottom: 1px solid var(--line-1);
-    background: #fff;
+    /* background: #fff; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-surface, #fff);
 }
 
 .post-md code
 {
     border-radius: 4px;
-    background: #e4e4e4;
+    /* background: #e4e4e4; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    background: var(--c-background, #e4e4e4);
     padding: 2px 4px;
-    color: #2d2d2d;
+    /* color: #2d2d2d; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-font, #2d2d2d);
     font-size: 1rem;
 }
 

@@ -43,14 +43,18 @@ html {
 }
 
 .hl {
-    color: #D0121B !important;
+    /* color: #D0121B !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-accent, #D0121B) !important;
     font-weight: bold !important;
     font-style: italic !important;
 }
 
 .post-md a.project-page-link,
 .project-page-link {
-    color: #D0121B !important;
+    /* color: #D0121B !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-accent, #D0121B) !important;
 }
 
 .yf {
@@ -68,12 +72,16 @@ a:has(img) {
 } */
 .tab,
 .name-tab {
-    color: #4f7dde  !important;
+    /* color: #4f7dde  !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-blue, #4f7dde)  !important;
     cursor: pointer  !important;
 }
 .tab.active,
 .name-tab.active {
-    color: #000000  !important;
+    /* color: #000000  !important; */
+    /* 改用主题色变量以支持暗色主题 / Use theme color variable to support dark theme */
+    color: var(--c-font, #000000)  !important;
 }
 .tab-content {
     display: none  !important;
